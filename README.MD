@@ -29,7 +29,7 @@ Edit
 ## 📞 Contact
 
 For custom versions, contact: **Akovian Technologies**  
-📩 WhatsApp: [+2348012345678](https://wa.me/2348012345678)
+📩 WhatsApp: [+2348153053703](https://wa.me/2348012345678)
 
 ## 📜 License
 
