@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseFit | Premium Fitness</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(145deg, #f0f9ff, #cdefff);
+      color: #111;
+    }
+    header {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: url('images/Gemini_Generated_Image_eljleteljleteljl.png') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+    .hero h2,
+    .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      background: #eafaff;
+    }
+    .feature {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .feature.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease-out;
+    }
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      color: #00c6ff;
+    }
+    .cta {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #ffffff;
+    }
+    .cta a {
+      display: inline-block;
+      background: #00c6ff;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .cta a:hover {
+      background: #0072ff;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f2f2f2;
+      color: #777;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      .cta a {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PulseFit</h1>
+    <p>Premium Fitness Coaching, Anytime, Anywhere</p>
+  </header>
+
+  <section class="hero">
+    <h2>Transform Your Body with PulseFit</h2>
+    <p>Online and offline fitness plans, nutrition coaching, and personal training tailored for your goals. Become your strongest self with PulseFit.</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Personal Training</h3>
+      <p>Customized workouts based on your body type and fitness goals with real-time trainer support.</p>
+    </div>
+    <div class="feature">
+      <h3>Meal Planning</h3>
+      <p>Science-backed meal plans that align with your workout intensity, weight goals, and schedule.</p>
+    </div>
+    <div class="feature">
+      <h3>Progress Tracking</h3>
+      <p>Weekly reports, charts, and feedback to help you measure gains, body fat loss, and strength boosts.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <a href="https://wa.me/2348012345678?text=I'm%20interested%20in%20joining%20PulseFit">Join the Pulse</a>
+  </section>
+
+  <footer>
+    <p>© 2025 PulseFit. Built with 💪 by Akovian Technologies.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.feature').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
